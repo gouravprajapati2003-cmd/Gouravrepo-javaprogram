@@ -1,7 +1,7 @@
 public class ArmstrongNumberChecker {
     public static void main(String[] args) {
         int sum = 0;
-        int num = 12345;
+        int num = 153;
         int len = String.valueOf(num).length();
       while (num != 0) {
         int base = num % 10;
