@@ -1,16 +1,17 @@
-//Print the first 10 Fibonacci numbers.
+
 public class FibonacciSeries {
+
+    static int fibonacci(int n) {
+        if (n <= 1)
+            return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
     public static void main(String[] args) {
-        int n = 10;  // number of terms
-        int a = 0, b = 1;
+        int n = 10;
 
-        System.out.println("First " + n + " Fibonacci numbers:");
-
-        for (int i = 1; i <= n; i++) {
-            System.out.print(a + " "); // print current number
-            int next = a + b;          // calculate next number
-            a = b;                     // shift forward
-            b = next;
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + " ");
         }
     }
 }
